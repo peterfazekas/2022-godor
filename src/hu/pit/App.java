@@ -35,6 +35,15 @@ public class App {
         System.out.println("Ezen a helyen a felszín " +
                 service.getDepthAtCertainDistance(distance) +
                 " méter mélyen van.");
+        System.out.println("3. feladat");
+        System.out.println("Az érintetlen terület aránya " +
+                service.getUntouchedArea());
+        var pits = service.getPits();
+        fileWriter.writeAll(pits);
+        System.out.println("5. feladat");
+        System.out.println("A gödrök száma: " + pits.size());
+        System.out.println("6. feladat");
+        System.out.println(service.getPitDetails(distance));
     }
 
 
